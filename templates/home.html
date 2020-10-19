@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1> PR Assignment 3</h1>
+<br>
+{% if messages %}
+    {% for message in messages %}
+        <li>{{ message }}</li>
+    {% endfor %}
+{% endif %}
+<form action="upload", method='POST', enctype="multipart/form-data">
+
+    {% csrf_token%}
+    <h3>Enter your csv file here:</h3><br><br>
+    
+    <input type = "file" name = "userFile">
+    <input type="submit" class="button button2">
+</form>
+{% endblock %}

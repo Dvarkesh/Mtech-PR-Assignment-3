@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+    table{
+        border-collapse: collapse;
+        width: 80%;
+    }
+    table, th, td{
+        border: 1px solid maroon;
+        margin: auto;
+    }
+    .button {
+        border: none;
+        color: white;
+        padding: 6px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+        margin: none;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+    .button2 {
+        background-color: white; 
+        color: black; 
+        border: 1px solid maroon;
+    }
+    .button:hover {
+        background-color: maroon;
+        color: peachpuff;
+    }
+    .main{
+        background-color: peachpuff;
+        color: maroon;
+        font-family: verdana;
+    }
+    .center {
+        text-align:center;
+        margin: auto;
+        margin-top: 5%;
+        width: 60%;
+        padding: 10px;
+      }
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PR Assignment 3</title>
+</head>
+<body class = "main">
+    <div class ="center">
+        {% block content %}
+        {% endblock %}
+    </div>
+    
+</body>
+</html>

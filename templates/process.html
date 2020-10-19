@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>File Name: {{ file_name }}</h2>
+    {% if col_type %}
+   <table>
+       <tr>
+           <th>col</th>
+           <th>row</th>
+       </tr>
+       <tr>
+        <td>
+            {{ col }}
+        </td> 
+        <td>
+            {{ row }}
+        </td>  
+       </tr>
+   </table>
+   <br>
+   <table>
+    <tr>
+        <th>col</th>
+        <th>type</th>
+    </tr>
+    {% for key,value in col_type.items %}
+    <tr>
+        <td>
+            {{ key }}
+        </td>
+        <td>
+            {{ value }}
+        </td>
+    </tr>
+    {% endfor %}
+    </table>
+    {% endif %}
+    <table align="center"">
+        <tr>
+            {% for col in fields %}
+            <th>
+                {{ col }}
+            </th>
+            {% endfor %}
+        </tr>
+            {% for row in rows %}
+            <tr>
+                {% for col in row %}
+                <td>
+                    {{ col }}
+                </td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+            
+    </table>
+{% endblock %}
